@@ -6,7 +6,7 @@ from telegram.ext import (
     MessageHandler, ContextTypes, filters, PreCheckoutQueryHandler
 )
 
-TOKEN   = "7859933993:AAFW4gctDkBYNMnKTmmLR-X2E6il2YTb_yY"
+TOKEN   = "7859933993:AAG9Ss1bGQV2z8q5hpL4HE1Xd1_CxlckfG0"
 ADMIN_ID = 7394635812
 PAYMENT_TOKEN = "284685063:TEST:Y2Y5Y2Q5MzQ5NzY0"
 
