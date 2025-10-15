@@ -10,6 +10,24 @@ TOKEN   = "7859933993:AAG9Ss1bGQV2z8q5hpL4HE1Xd1_CxlckfG0"
 ADMIN_ID = 7394635812
 PAYMENT_TOKEN = "284685063:TEST:Y2Y5Y2Q5MzQ5NzY0"
 
+# ── KEEP-ALIVE İÇİN GEREKLİ KISIM ──
+from flask import Flask
+from threading import Thread
+
+app_web = Flask(name)
+
+@app_web.route('/')
+def index():
+    return "🤖 Bot çalışıyor!"
+
+def run():
+    app_web.run(host='0.0.0.0', port=8080)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+# ───────────────────────────────────
+
 user_sessions      = {}
 waiting_for        = {}
 scheduled_posts    = []
@@ -422,4 +440,6 @@ async def main():
 if __name__ == "__main__":
     import nest_asyncio
     nest_asyncio.apply()
+
+    keep_alive()  # web sunucusu başlat
     asyncio.run(main())
