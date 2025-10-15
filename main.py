@@ -14,7 +14,7 @@ PAYMENT_TOKEN = "284685063:TEST:Y2Y5Y2Q5MzQ5NzY0"
 from flask import Flask
 from threading import Thread
 
-app_web = Flask(name)
+app_web = Flask(__name__)
 
 @app_web.route('/')
 def index():
